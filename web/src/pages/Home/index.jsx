@@ -9,22 +9,25 @@ import { USER_ROLE } from "../../utils/role";
 
 export function Home() {
   const { user } = useAuth();
+
   return (
     <Container>
       <Header />
 
       <main>
         <Feature title="Produto" icon={FiTag} to="/product" />
-        {
+        {[USER_ROLE.ADMIN, USER_ROLE.SALE].includes(user.role) && (
           <>
-            <Feature title="Fornecedores" icon={FiTruck} to="/suppliers" />
+            {user.role === USER_ROLE.ADMIN && (
+              <Feature title="Fornecedores" icon={FiTruck} to="/suppliers" />
+            )}
             <Feature
               title="Relatório de vendas"
               icon={FiShoppingCart}
               to="/sales-report"
             />
           </>
-        }
+        )}
       </main>
     </Container>
   );
