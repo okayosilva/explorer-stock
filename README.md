@@ -24,12 +24,6 @@ Um projeto voltado para o desenvolvimento de rotas de autorização e autentica�
 
 <hr/>
 
- ## Demonstração:
- 
-<div>
-    <a href="https://rocketnotes-5ee3.vercel.app/">Acesse</a>
-</div>
-
 ## Instalação
   * Faça um clone do repositório do projeto no GitHub.
   * Navegue até o diretório do projeto.
